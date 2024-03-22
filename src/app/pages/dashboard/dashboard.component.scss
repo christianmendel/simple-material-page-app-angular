@@ -1,0 +1,10 @@
+.section_charts {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .div_chart_item {
+    width: 40%;
+  }
+}

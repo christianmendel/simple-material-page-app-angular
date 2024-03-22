@@ -1,0 +1,73 @@
+<app-container>
+  <h1>Register</h1>
+  <section>
+    <form>
+      <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input matInput type="text" name="name" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput type="text" name="lastName" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Phone</mat-label>
+        <input matInput type="tel" name="phone" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input matInput type="text" name="address" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput type="email" name="email" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Language</mat-label>
+        <mat-select name="language" required>
+          <mat-option value="1">English</mat-option>
+          <mat-option value="2">Spanish</mat-option>
+          <mat-option value="3">Portuguese</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Currency</mat-label>
+        <mat-select name="coin" required>
+          <mat-option value="1">USD</mat-option>
+          <mat-option value="2">EUR</mat-option>
+          <mat-option value="3">BRL</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-checkbox name="receiveNotificationsInEmail"
+        >Receive notifications via email</mat-checkbox
+      >
+
+      <mat-checkbox name="receiveNotificationsInApp"
+        >Receive notifications in the app</mat-checkbox
+      >
+
+      <button mat-raised-button color="primary" type="submit">Register</button>
+    </form>
+  </section>
+</app-container>
